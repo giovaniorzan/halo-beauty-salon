@@ -1,0 +1,216 @@
+{
+  "categories": [
+    { "id": "all", "label": "Toate" },
+    { "id": "epilare", "label": "Epilare" },
+    { "id": "facial", "label": "Tratamente faciale" },
+    { "id": "manichiura", "label": "Manichiură" },
+    { "id": "coafor", "label": "Coafor" },
+    { "id": "machiaj", "label": "Machiaj" },
+    { "id": "remodelare", "label": "Remodelare" }
+  ],
+  "services": [
+    {
+      "id": "epil-1",
+      "category": "epilare",
+      "categoryLabel": "Epilare laser",
+      "title": "Epilare definitivă – Față",
+      "description": "Eliminarea părului nedorit de pe zona feței cu laserul profesional Elysion Pro. Rezultate vizibile de la prima ședință.",
+      "priceDisplay": "150 lei",
+      "duration": "30 min",
+      "badge": "Popular"
+    },
+    {
+      "id": "epil-2",
+      "category": "epilare",
+      "categoryLabel": "Epilare laser",
+      "title": "Epilare definitivă – Axile",
+      "description": "Tratament rapid și confortabil pentru zona axilelor cu tehnologie laser de ultimă generație.",
+      "priceDisplay": "120 lei",
+      "duration": "20 min"
+    },
+    {
+      "id": "epil-3",
+      "category": "epilare",
+      "categoryLabel": "Epilare laser",
+      "title": "Epilare definitivă – Picioare integral",
+      "description": "Piele catifelată pe toată zona picioarelor. Tratament complet cu aparat Elysion Pro.",
+      "priceDisplay": "350 lei",
+      "duration": "60 min"
+    },
+    {
+      "id": "epil-4",
+      "category": "epilare",
+      "categoryLabel": "Epilare laser",
+      "title": "Epilare definitivă – Bikini",
+      "description": "Tratament delicat și eficient pentru zona bikini, cu rezultate pe termen lung.",
+      "priceDisplay": "200 lei",
+      "duration": "30 min"
+    },
+    {
+      "id": "epil-5",
+      "category": "epilare",
+      "categoryLabel": "Epilare cu ceară",
+      "title": "Epilare cu ceară – Full body",
+      "description": "Epilare clasică cu ceară pentru întregul corp. Piele fină și catifelată.",
+      "priceDisplay": "200 lei",
+      "duration": "90 min"
+    },
+    {
+      "id": "fac-1",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Tratament facial de hidratare",
+      "description": "Hidratare profundă pentru orice tip de ten. Previne îmbătrânirea și menține pielea moale și sănătoasă.",
+      "priceDisplay": "240 lei",
+      "duration": "60 min",
+      "badge": "Recomandat"
+    },
+    {
+      "id": "fac-2",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Tratament antirid",
+      "description": "Elimină ridurile și previne îmbătrânirea pielii. Rezultate vizibile chiar de la prima procedură.",
+      "priceDisplay": "280 lei",
+      "duration": "60 min"
+    },
+    {
+      "id": "fac-3",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Tratament anti-aging",
+      "description": "Reduce liniile fine și ridurile, oferind tenului un aspect tânăr, strălucitor și neted.",
+      "priceDisplay": "300 lei",
+      "duration": "75 min"
+    },
+    {
+      "id": "fac-4",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Masaj facial",
+      "description": "Îmbunătățește circulația, relaxează și menține aspectul tânăr al pielii.",
+      "priceDisplay": "150 lei",
+      "duration": "45 min"
+    },
+    {
+      "id": "fac-5",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Mezoterapie facială",
+      "description": "Exfoliere și regenerare pentru un ten mai neted și mai luminos.",
+      "priceDisplay": "350 lei",
+      "duration": "60 min"
+    },
+    {
+      "id": "fac-6",
+      "category": "facial",
+      "categoryLabel": "Tratamente faciale",
+      "title": "Peeling chimic",
+      "description": "Regenerarea pielii pentru un ten mai luminos și mai sănătos.",
+      "priceDisplay": "200 lei",
+      "duration": "45 min"
+    },
+    {
+      "id": "man-1",
+      "category": "manichiura",
+      "categoryLabel": "Manichiură",
+      "title": "Manichiură semipermanentă",
+      "description": "Unghii impecabile cu ojă semipermanentă care rezistă până la 3 săptămâni.",
+      "priceDisplay": "120 lei",
+      "duration": "60 min",
+      "badge": "Bestseller"
+    },
+    {
+      "id": "man-2",
+      "category": "manichiura",
+      "categoryLabel": "Manichiură",
+      "title": "Manichiură cu gel",
+      "description": "Aspect strălucitor, corecție formă, protecție pentru unghii fragile. 3–4 săptămâni.",
+      "priceDisplay": "150 lei",
+      "duration": "90 min"
+    },
+    {
+      "id": "man-3",
+      "category": "manichiura",
+      "categoryLabel": "Pedichiură",
+      "title": "Pedichiură semipermanentă",
+      "description": "Îngrijire completă pentru picioare cu ojă semipermanentă durabilă.",
+      "priceDisplay": "130 lei",
+      "duration": "75 min"
+    },
+    {
+      "id": "coa-1",
+      "category": "coafor",
+      "categoryLabel": "Coafor",
+      "title": "Coafură eveniment",
+      "description": "Împletituri, cocuri sau bucle — coafura perfectă pentru orice eveniment.",
+      "priceDisplay": "150 lei",
+      "duration": "60 min"
+    },
+    {
+      "id": "coa-2",
+      "category": "coafor",
+      "categoryLabel": "Coafor",
+      "title": "Vopsire păr",
+      "description": "Schimbare de nuanță profesională cu produse premium.",
+      "priceDisplay": "200 lei",
+      "duration": "120 min"
+    },
+    {
+      "id": "coa-3",
+      "category": "coafor",
+      "categoryLabel": "Coafor",
+      "title": "Tuns și coafat",
+      "description": "Tuns profesional cu styling final. Alege noul tău look cu specialiștii noștri.",
+      "priceDisplay": "80 lei",
+      "duration": "45 min"
+    },
+    {
+      "id": "mac-1",
+      "category": "machiaj",
+      "categoryLabel": "Machiaj",
+      "title": "Machiaj de zi",
+      "description": "Look proaspăt și natural, rezistent pe parcursul zilei.",
+      "priceDisplay": "120 lei",
+      "duration": "45 min"
+    },
+    {
+      "id": "mac-2",
+      "category": "machiaj",
+      "categoryLabel": "Machiaj",
+      "title": "Machiaj de seară",
+      "description": "Smokey eyes, cat eye sau look-uri în tendințe.",
+      "priceDisplay": "150 lei",
+      "duration": "60 min"
+    },
+    {
+      "id": "mac-3",
+      "category": "machiaj",
+      "categoryLabel": "Machiaj",
+      "title": "Machiaj de mireasă",
+      "description": "Machiaj rezistent, nuanțe fine, strălucire perfectă toată ziua.",
+      "priceDisplay": "250 lei",
+      "duration": "75 min",
+      "badge": "Premium"
+    },
+    {
+      "id": "rem-1",
+      "category": "remodelare",
+      "categoryLabel": "Remodelare corporală",
+      "title": "Remodelare corporală Icoone",
+      "description": "Tehnologie Roboderm® cu LASER și LED — microstimulare intensă pentru tonifiere.",
+      "priceDisplay": "250 lei",
+      "duration": "45 min",
+      "badge": "Nou"
+    },
+    {
+      "id": "rem-2",
+      "category": "remodelare",
+      "categoryLabel": "Remodelare corporală",
+      "title": "Tratament anticelulitic",
+      "description": "Îmbunătățește microcirculația și aspectul pielii. Rezultate vizibile.",
+      "priceDisplay": "200 lei",
+      "duration": "45 min"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
+      "alt": "Interior salon de înfrumusețare",
+      "caption": "Salonul nostru",
+      "featured": true
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+      "alt": "Manichiură profesională",
+      "caption": "Manichiură"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+      "alt": "Tratament facial",
+      "caption": "Tratamente faciale"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+      "alt": "Zonă coafor",
+      "caption": "Coafor"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
+      "alt": "Epilare laser",
+      "caption": "Epilare laser"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
+      "alt": "Machiaj profesional",
+      "caption": "Machiaj"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80",
+      "alt": "Rezultate tratament",
+      "caption": "Rezultate"
+    }
+  ]
+}

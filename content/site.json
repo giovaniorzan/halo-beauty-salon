@@ -1,0 +1,48 @@
+{
+  "siteName": "Halo Beauty Salon",
+  "siteUrl": "https://halobeautysalon.ro",
+  "locale": "ro_RO",
+  "contact": {
+    "addressLine1": "Strada Tudor Vianu nr. 4",
+    "addressLine2": "Iași, zona Copou",
+    "phones": [
+      { "label": "Salon", "number": "0747566130", "display": "0747 566 130" },
+      { "label": "Manichiură", "number": "0737534791", "display": "0737 534 791" }
+    ],
+    "email": "contact@halobeautysalon.ro",
+    "hours": {
+      "weekdays": "Luni – Vineri: 09:00 – 19:00",
+      "saturday": "Sâmbătă: 09:00 – 17:00",
+      "sunday": "Duminică: 09:00 – 14:00",
+      "headerShort": "L-V: 09–19 | S: 09–17"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/HaloBeautyIasi/",
+      "instagram": "https://www.instagram.com/halobeautycopou/"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.5!2d27.5738!3d47.1838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb9a65a6f14d%3A0xc375ee7bfbcaf329!2sHalo%20Beauty%20Salon!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro",
+    "whatsappNumber": "40747566130"
+  },
+  "hero": {
+    "label": "Salon de Înfrumusețare Premium în Iași",
+    "title": "Descoperă frumusețea ta autentică",
+    "titleItalic": "frumusețea",
+    "description": "Locul din Iași în care frumusețea și sănătatea se unesc pentru a aduce bucurie pe chipul tău. Tratamente faciale, epilare definitivă laser, manichiură și coafor — totul într-un ambient luxos.",
+    "heroImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
+  },
+  "about": {
+    "title": "Un loc creat pentru frumusețea ta",
+    "titleItalic": "frumusețea",
+    "paragraphs": [
+      "Halo Beauty Salon este locul din Iași unde fiecare vizită devine o experiență de răsfăț. Situat în zona Copou, salonul nostru îmbină perfect stilul modern și rafinat cu atmosfera relaxantă de care ai nevoie.",
+      "Echipa noastră de specialiști dedicați folosește cele mai noi tehnologii și produse profesionale pentru a-ți oferi rezultate vizibile chiar de la prima ședință. Fie că vii pentru epilare definitivă, un tratament facial sau o manichiură impecabilă, vei pleca mereu cu un zâmbet."
+    ],
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+    "features": [
+      { "title": "Echipamente premium", "description": "Elysion Pro și Icoone Laser" },
+      { "title": "Specialiști dedicați", "description": "Echipă tânără și prietenoasă" },
+      { "title": "Produse profesionale", "description": "Rezultate garantate" },
+      { "title": "Ambient de lux", "description": "Design de arhitect" }
+    ]
+  }
+}

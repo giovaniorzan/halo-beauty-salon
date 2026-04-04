@@ -1,0 +1,150 @@
+# Decap CMS — editează repo-ul și branch-ul după contul tău GitHub.
+# Setup: https://decapcms.org/docs/github-backend/
+backend:
+  name: github
+  repo: giovaniorzan/halo-beauty-salon
+  branch: main
+
+# Pentru test local: rulează `npx decap-server` și decomentează:
+# local_backend: true
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+locale: ro
+
+collections:
+  - name: content
+    label: Conținut site
+    files:
+      - label: Setări & contact
+        name: site
+        file: content/site.json
+        fields:
+          - { label: Nume site, name: siteName, widget: string }
+          - { label: URL site, name: siteUrl, widget: string }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Adresă linia 1, name: addressLine1, widget: string }
+              - { label: Adresă linia 2, name: addressLine2, widget: string }
+              - label: Telefoane
+                name: phones
+                widget: list
+                fields:
+                  - { label: Etichetă, name: label, widget: string }
+                  - { label: Număr (fără spații), name: number, widget: string }
+                  - { label: Afișare, name: display, widget: string }
+              - { label: Email, name: email, widget: string }
+              - label: Program
+                name: hours
+                widget: object
+                fields:
+                  - { label: Luni–Vineri, name: weekdays, widget: string }
+                  - { label: Sâmbătă, name: saturday, widget: string }
+                  - { label: Duminică, name: sunday, widget: string }
+                  - { label: Scurt (header), name: headerShort, widget: string }
+              - label: Social
+                name: social
+                widget: object
+                fields:
+                  - { label: Facebook URL, name: facebook, widget: string }
+                  - { label: Instagram URL, name: instagram, widget: string }
+              - { label: WhatsApp (fără +), name: whatsappNumber, widget: string }
+              - { label: URL embed Hartă Google, name: mapEmbedUrl, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Etichetă mică, name: label, widget: string }
+              - { label: Titlu, name: title, widget: string }
+              - { label: Cuvânt italic în titlu, name: titleItalic, widget: string }
+              - { label: Descriere, name: description, widget: text }
+              - { label: Imagine hero (URL sau /images/hero/...), name: heroImage, widget: string }
+          - label: Despre noi
+            name: about
+            widget: object
+            fields:
+              - { label: Titlu, name: title, widget: string }
+              - { label: Cuvânt italic, name: titleItalic, widget: string }
+              - label: Paragrafe
+                name: paragraphs
+                widget: list
+                field: { label: Paragraf, widget: text }
+              - { label: Imagine (URL sau /images/about/...), name: image, widget: string }
+              - label: Features
+                name: features
+                widget: list
+                fields:
+                  - { label: Titlu, name: title, widget: string }
+                  - { label: Descriere, name: description, widget: string }
+
+      - label: Servicii
+        name: services
+        file: content/services.json
+        fields:
+          - label: Categorii filtru
+            name: categories
+            widget: list
+            fields:
+              - { label: ID (slug), name: id, widget: string }
+              - { label: Etichetă, name: label, widget: string }
+          - label: Servicii
+            name: services
+            widget: list
+            fields:
+              - { label: ID unic, name: id, widget: string }
+              - { label: Categorie (id), name: category, widget: string }
+              - { label: Badge categorie, name: categoryLabel, widget: string }
+              - { label: Titlu, name: title, widget: string }
+              - { label: Descriere, name: description, widget: text }
+              - { label: Preț afișat, name: priceDisplay, widget: string }
+              - { label: Durată, name: duration, widget: string, required: false }
+              - { label: Badge opțional, name: badge, widget: string, required: false }
+
+      - label: Prețuri (carduri)
+        name: pricing
+        file: content/pricing.json
+        fields:
+          - label: Grupuri
+            name: groups
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Titlu, name: title, widget: string }
+              - { label: Descriere, name: description, widget: string }
+              - { label: Card evidențiat, name: featured, widget: boolean, default: false }
+              - label: Linii preț
+                name: items
+                widget: list
+                fields:
+                  - { label: Nume serviciu, name: name, widget: string }
+                  - { label: Preț, name: price, widget: string }
+
+      - label: Galerie
+        name: gallery
+        file: content/gallery.json
+        fields:
+          - label: Imagini
+            name: items
+            widget: list
+            fields:
+              - { label: Imagine, name: src, widget: image }
+              - { label: Text alternativ (SEO), name: alt, widget: string }
+              - { label: Legendă, name: caption, widget: string, required: false }
+              - { label: Featured (mare în grid), name: featured, widget: boolean, default: false }
+
+      - label: Testimoniale
+        name: testimonials
+        file: content/testimonials.json
+        fields:
+          - label: Recenzii
+            name: items
+            widget: list
+            fields:
+              - { label: Citat, name: quote, widget: text }
+              - { label: Nume, name: name, widget: string }
+              - { label: Serviciu, name: service, widget: string }
+              - { label: Inițială avatar, name: initial, widget: string }
+              - { label: Stele (1-5), name: rating, widget: number, value_type: int, min: 1, max: 5 }

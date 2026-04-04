@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "id": "manichiura",
+      "title": "Manichiură & Pedichiură",
+      "description": "Unghii impecabile",
+      "featured": false,
+      "items": [
+        { "name": "Manichiură clasică", "price": "80 lei" },
+        { "name": "Manichiură semipermanentă", "price": "120 lei" },
+        { "name": "Manichiură cu gel", "price": "150 lei" },
+        { "name": "Pedichiură clasică", "price": "100 lei" },
+        { "name": "Pedichiură semipermanentă", "price": "130 lei" }
+      ]
+    },
+    {
+      "id": "epilare",
+      "title": "Epilare definitivă laser",
+      "description": "Tehnologie Elysion Pro",
+      "featured": true,
+      "items": [
+        { "name": "Față complet", "price": "150 lei" },
+        { "name": "Axile", "price": "120 lei" },
+        { "name": "Bikini", "price": "200 lei" },
+        { "name": "Picioare integral", "price": "350 lei" },
+        { "name": "Brațe complet", "price": "200 lei" },
+        { "name": "Full body", "price": "700 lei" }
+      ]
+    },
+    {
+      "id": "facial",
+      "title": "Tratamente faciale",
+      "description": "Tenul tău merită",
+      "featured": false,
+      "items": [
+        { "name": "Hidratare profundă", "price": "240 lei" },
+        { "name": "Tratament antirid", "price": "280 lei" },
+        { "name": "Anti-aging premium", "price": "300 lei" },
+        { "name": "Masaj facial", "price": "150 lei" },
+        { "name": "Mezoterapie", "price": "350 lei" },
+        { "name": "Peeling chimic", "price": "200 lei" }
+      ]
+    },
+    {
+      "id": "coafor",
+      "title": "Coafor & Machiaj",
+      "description": "Look-ul perfect",
+      "featured": false,
+      "items": [
+        { "name": "Tuns și coafat", "price": "80 lei" },
+        { "name": "Coafură eveniment", "price": "150 lei" },
+        { "name": "Vopsire păr", "price": "200 lei" },
+        { "name": "Machiaj de zi", "price": "120 lei" },
+        { "name": "Machiaj de seară", "price": "150 lei" },
+        { "name": "Machiaj de mireasă", "price": "250 lei" }
+      ]
+    }
+  ]
+}
