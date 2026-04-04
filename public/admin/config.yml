@@ -1,11 +1,16 @@
-# Decap CMS — editează repo-ul și branch-ul după contul tău GitHub.
-# Setup: https://decapcms.org/docs/github-backend/
+# Decap CMS — Vercel: OAuth prin rutele /auth și /callback din Next.js.
+# Ghid: vezi .env.example și invită clienta ca „Collaborator” pe repo (Write).
 backend:
   name: github
   repo: giovaniorzan/halo-beauty-salon
   branch: main
+  # EXACT URL-ul public unde se deschide site-ul (https, fără slash final).
+  # Trebuie să coincidă cu originea din DECAP_ALLOWED_ORIGINS pe Vercel.
+  # Ex.: https://nume-proiect.vercel.app sau https://www.domeniu.ro
+  base_url: https://halo-beauty-salon.vercel.app
+  auth_endpoint: auth
 
-# Pentru test local: rulează `npx decap-server` și decomentează:
+# Pentru test local fără GitHub OAuth: rulează `npx decap-server` și decomentează:
 # local_backend: true
 
 media_folder: public/images/uploads
