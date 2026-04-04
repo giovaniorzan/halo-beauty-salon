@@ -46,7 +46,7 @@ collections:
                 name: hours
                 widget: object
                 fields:
-                  - { label: Luni–Vineri, name: weekdays, widget: string }
+                  - { label: "Luni–Joi + Vineri (poți folosi Enter pentru linie nouă)", name: weekdays, widget: text }
                   - { label: Sâmbătă, name: saturday, widget: string }
                   - { label: Duminică, name: sunday, widget: string }
                   - { label: Scurt (header), name: headerShort, widget: string }

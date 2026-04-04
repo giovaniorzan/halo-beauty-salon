@@ -11,10 +11,10 @@
     ],
     "email": "contact@halobeautysalon.ro",
     "hours": {
-      "weekdays": "Luni – Vineri: 09:00 – 19:00",
+      "weekdays": "Luni – Joi: 09:00 – 19:00\nVineri: 09:00 – 14:00",
       "saturday": "Sâmbătă: 09:00 – 17:00",
-      "sunday": "Duminică: 09:00 – 14:00",
-      "headerShort": "L-V: 09–19 | S: 09–17"
+      "sunday": "Duminică: Închis",
+      "headerShort": "L–J: 9–19 · V: 9–14 · S: 9–17 · D: închis"
     },
     "social": {
       "facebook": "https://www.facebook.com/HaloBeautyIasi/",

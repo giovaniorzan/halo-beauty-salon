@@ -73,7 +73,7 @@ export function HeroSection() {
             <h2 className="mb-2 font-sans text-xs font-semibold uppercase tracking-wider text-gold-light">
               Program
             </h2>
-            <p className="text-sm leading-relaxed opacity-90">
+            <p className="whitespace-pre-line text-sm leading-relaxed opacity-90">
               {site.contact.hours.weekdays}
               <br />
               {site.contact.hours.saturday}

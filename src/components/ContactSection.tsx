@@ -109,7 +109,7 @@ export function ContactSection() {
                 </span>
                 <div>
                   <h3 className="font-sans text-sm font-semibold text-charcoal">Program</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-gray-salon">
+                  <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-gray-salon">
                     {c.hours.weekdays}
                     <br />
                     {c.hours.saturday}

@@ -135,7 +135,7 @@ export function SiteFooter() {
               </li>
               <li className="flex gap-2">
                 <ClockSm />
-                <span>
+                <span className="whitespace-pre-line">
                   {c.hours.weekdays}
                   <br />
                   {c.hours.headerShort}
