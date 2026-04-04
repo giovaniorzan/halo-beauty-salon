@@ -91,14 +91,14 @@ export function SiteHeader() {
           </Link>
 
           <nav
-            className="hidden items-center gap-4 lg:flex xl:gap-5"
+            className="font-nav hidden items-center gap-4 lg:flex xl:gap-5"
             aria-label="Principal"
           >
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative text-[13px] font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:bg-gold-light after:transition-all xl:text-sm ${
+                className={`relative text-[13px] font-normal tracking-wide transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:bg-gold-light after:transition-all xl:text-sm ${
                   onDarkHero
                     ? active === item.href
                       ? "text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.65)] after:w-full"
@@ -113,9 +113,9 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-2 xl:flex">
+          <div className="font-nav hidden items-center gap-2 xl:flex">
             <span
-              className={`flex items-center gap-1.5 text-[11px] ${
+              className={`flex items-center gap-1.5 text-[11px] font-normal tracking-wide ${
                 onDarkHero ? "text-white/80" : "text-gray-salon"
               }`}
             >
@@ -126,7 +126,7 @@ export function SiteHeader() {
 
           <Link
             href="#contact"
-            className={`hidden shrink-0 items-center rounded-full font-semibold text-white transition md:inline-flex ${
+            className={`font-nav hidden shrink-0 items-center rounded-full font-semibold tracking-wide text-white transition md:inline-flex ${
               onDarkHero
                 ? "border border-white/25 bg-rose/90 px-4 py-2 text-xs shadow-none backdrop-blur-sm hover:border-white/40 hover:bg-rose"
                 : "bg-rose px-4 py-2 text-xs shadow-sm hover:bg-rose-deep hover:shadow-md"
@@ -171,7 +171,7 @@ export function SiteHeader() {
           <Link
             key={item.href}
             href={item.href}
-            className="font-display text-2xl text-charcoal"
+            className="font-nav text-2xl font-normal tracking-wide text-charcoal"
             onClick={() => setOpen(false)}
           >
             {item.label}
@@ -179,7 +179,7 @@ export function SiteHeader() {
         ))}
         <Link
           href="#contact"
-          className="mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold text-white"
+          className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white"
           onClick={() => setOpen(false)}
         >
           Programează-te

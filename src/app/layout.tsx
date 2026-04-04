@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Inter, Josefin_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { JsonLdLocalBusiness } from "@/components/JsonLd";
 import { getSiteUrl, site } from "@/lib/site";
@@ -14,6 +14,13 @@ const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
   display: "swap",
+});
+
+const josefin = Josefin_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-josefin",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 const baseUrl = getSiteUrl();
@@ -79,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="ro" className={`${playfair.variable} ${inter.variable} ${josefin.variable}`}>
       <body>
         <JsonLdLocalBusiness />
         {children}

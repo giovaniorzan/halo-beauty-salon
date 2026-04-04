@@ -79,12 +79,12 @@ export function SiteFooter() {
             <h2 className="font-sans text-xs font-semibold uppercase tracking-wider text-gold-light">
               Navigare
             </h2>
-            <nav className="mt-6 flex flex-col gap-2" aria-label="Footer">
+            <nav className="mt-6 flex flex-col gap-2 font-nav" aria-label="Footer">
               {NAV.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-white/60 transition hover:translate-x-1 hover:text-white"
+                  className="text-sm font-normal tracking-wide text-white/60 transition hover:translate-x-1 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -96,12 +96,12 @@ export function SiteFooter() {
             <h2 className="font-sans text-xs font-semibold uppercase tracking-wider text-gold-light">
               Servicii
             </h2>
-            <ul className="mt-6 flex flex-col gap-2">
+            <ul className="mt-6 flex flex-col gap-2 font-nav">
               {SERVICES.map((item, i) => (
                 <li key={i}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/60 transition hover:translate-x-1 hover:text-white"
+                    className="text-sm font-normal tracking-wide text-white/60 transition hover:translate-x-1 hover:text-white"
                   >
                     {item.label}
                   </Link>

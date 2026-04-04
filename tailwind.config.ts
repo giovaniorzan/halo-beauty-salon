@@ -19,6 +19,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        nav: ["var(--font-josefin)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
         salon: "0 4px 20px rgba(44,44,44,0.08)",

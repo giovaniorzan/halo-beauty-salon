@@ -31,19 +31,21 @@ export function HeroSection() {
 
       <div className="relative z-[2] mx-auto w-full max-w-content px-6 pb-24 pt-32 sm:pt-36 md:pt-40 lg:pt-44 xl:pt-48">
         <Reveal>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-gold-light md:text-sm">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-gold-light [text-shadow:0_1px_6px_rgba(80,50,40,0.45)] md:text-sm">
             {h.label}
           </p>
         </Reveal>
         <Reveal>
           <h1
             id="hero-heading"
-            className="font-display text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl"
+            className="font-display text-4xl font-semibold leading-tight text-white [text-shadow:0_2px_10px_rgba(80,50,40,0.5)] md:text-5xl lg:text-6xl"
           >
             {titleParts.length > 1 ? (
               <>
                 {titleParts[0]}
-                <em className="text-blush not-italic">{italic}</em>
+                <em className="not-italic text-[#e59a8f] [text-shadow:0_2px_12px_rgba(60,35,30,0.45)]">
+                  {italic}
+                </em>
                 {titleParts[1]}
               </>
             ) : (
@@ -52,7 +54,7 @@ export function HeroSection() {
           </h1>
         </Reveal>
         <Reveal>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/80">
+          <p className="mt-6 max-w-lg text-lg font-normal leading-relaxed text-white [text-shadow:0_1px_5px_rgba(80,50,40,0.4)]">
             {h.description}
           </p>
         </Reveal>
