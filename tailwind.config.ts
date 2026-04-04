@@ -15,6 +15,12 @@ const config: Config = {
         gold: { DEFAULT: "#C6A87D", light: "#D4BC9A", dark: "#A88A5E" },
         charcoal: { DEFAULT: "#2C2C2C", light: "#4A4A4A" },
         gray: { salon: "#7A7A7A", muted: "#B8B8B8" },
+        /** Text „nude” pe fundal cream (meniu mobil etc.) */
+        nude: {
+          DEFAULT: "#8E6B60",
+          deep: "#6E4A42",
+          soft: "#A67F72",
+        },
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],

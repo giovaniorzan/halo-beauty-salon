@@ -162,7 +162,7 @@ export function SiteHeader() {
       </header>
 
       <div
-        className={`fixed inset-0 z-[999] flex flex-col items-center justify-center gap-8 bg-cream/98 backdrop-blur-lg transition lg:hidden ${
+        className={`fixed inset-0 z-[999] flex flex-col items-center justify-center gap-8 bg-cream backdrop-blur-md transition lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!open}
@@ -171,7 +171,7 @@ export function SiteHeader() {
           <Link
             key={item.href}
             href={item.href}
-            className="font-nav text-2xl font-normal tracking-wide text-charcoal"
+            className="font-nav text-2xl font-normal tracking-wide text-nude-deep transition-colors hover:text-rose-deep active:text-rose-deep"
             onClick={() => setOpen(false)}
           >
             {item.label}
@@ -179,7 +179,7 @@ export function SiteHeader() {
         ))}
         <Link
           href="#contact"
-          className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white"
+          className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white shadow-salon"
           onClick={() => setOpen(false)}
         >
           Programează-te
