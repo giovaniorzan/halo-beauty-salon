@@ -1,9 +1,30 @@
-import { pricingContent } from "@/lib/site";
+"use client";
+
+import { useState } from "react";
+
 import { Reveal } from "@/components/Reveal";
+import { parseServicePrice } from "@/lib/parse-service-price";
+import { pricingContent } from "@/lib/site";
+
+const PEACH = "#e59a8f";
 
 export function PricingSection() {
+  const [openIds, setOpenIds] = useState<Set<string>>(() => {
+    const first = pricingContent.groups[0]?.id;
+    return first ? new Set([first]) : new Set();
+  });
+
+  function toggle(id: string) {
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
   return (
-    <section id="preturi" className="bg-white py-24 md:py-28" aria-labelledby="pricing-heading">
+    <section id="preturi" className="bg-cream py-24 md:py-28" aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-content px-6">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -18,77 +39,97 @@ export function PricingSection() {
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mt-4 text-balance text-gray-salon leading-relaxed">
+            <p className="mt-4 text-balance leading-relaxed text-gray-salon">
               Lista de mai jos reflectă tarifele comunicate de salon.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-7 md:grid-cols-2">
-          {pricingContent.groups.map((g) => (
-            <Reveal key={g.id}>
-              <article
-                className={`flex h-full flex-col overflow-hidden rounded-xl transition hover:-translate-y-1 hover:shadow-salon-lg ${
-                  g.featured
-                    ? "bg-charcoal text-white shadow-salon-lg"
-                    : "bg-cream text-charcoal"
+        <div className="mt-16 border-t border-black/[0.08]">
+          {pricingContent.groups.map((g, gi) => {
+            const isOpen = openIds.has(g.id);
+            return (
+              <div
+                key={g.id}
+                className={`border-b border-black/[0.08] ${
+                  gi % 2 === 0 ? "md:pr-10 lg:pr-16" : "md:pl-10 lg:pl-16"
                 }`}
               >
-                <div className="px-8 pb-4 pt-9 text-center">
-                  <div
-                    className={`mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full ${
-                      g.featured ? "bg-white/10 text-gold-light" : "bg-white text-rose"
-                    }`}
-                  >
-                    <SparkIcon />
-                  </div>
-                  <h3 className="font-display text-xl font-semibold">{g.title}</h3>
-                  <p
-                    className={`mt-2 text-sm ${
-                      g.featured ? "text-white/60" : "text-gray-salon"
-                    }`}
-                  >
-                    {g.description}
-                  </p>
-                </div>
-                <ul className="flex flex-1 flex-col gap-0 px-8 pb-8">
-                  {g.items.map((row, i) => (
-                    <li
-                      key={i}
-                      className={`flex flex-col gap-1.5 border-b py-3 text-sm last:border-0 sm:flex-row sm:items-start sm:justify-between sm:gap-4 ${
-                        g.featured ? "border-white/10" : "border-black/[0.06]"
+                <button
+                  type="button"
+                  id={`pricing-trigger-${g.id}`}
+                  aria-expanded={isOpen}
+                  aria-controls={`pricing-panel-${g.id}`}
+                  onClick={() => toggle(g.id)}
+                  className="flex w-full items-start justify-between gap-4 py-5 text-left transition-colors hover:bg-black/[0.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 focus-visible:ring-offset-2 focus-visible:ring-offset-cream md:items-center md:py-6"
+                >
+                  <h3 className="font-display max-w-[85%] text-lg font-normal uppercase leading-snug tracking-[0.18em] text-charcoal md:text-xl md:tracking-[0.22em]">
+                    {g.title}
+                  </h3>
+                  <AccordionPlus open={isOpen} />
+                </button>
+
+                <div
+                  id={`pricing-panel-${g.id}`}
+                  role="region"
+                  aria-labelledby={`pricing-trigger-${g.id}`}
+                  className={`grid overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="min-h-0">
+                    <ul
+                      className={`pb-8 pt-1 ${
+                        gi % 2 === 0 ? "md:max-w-[min(100%,40rem)]" : "md:ml-auto md:max-w-[min(100%,40rem)]"
                       }`}
                     >
-                      <span
-                        className={`min-w-0 shrink-0 sm:max-w-[42%] ${
-                          g.featured ? "text-white/90" : "text-charcoal-light"
-                        }`}
-                      >
-                        {row.name}
-                      </span>
-                      <span
-                        className={`min-w-0 font-semibold leading-snug sm:max-w-[55%] sm:text-right ${
-                          g.featured ? "text-gold-light" : "text-rose"
-                        }`}
-                      >
-                        {row.price}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
+                      {g.items.map((row, i) => {
+                        const { amount, duration } = parseServicePrice(row.price);
+                        return (
+                          <li
+                            key={i}
+                            className="flex flex-col gap-1 border-b border-black/[0.05] py-4 last:border-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+                          >
+                            <div className="min-w-0 flex-1 sm:max-w-[58%]">
+                              <p className="font-nav text-[15px] font-normal leading-snug text-charcoal">
+                                {row.name}
+                              </p>
+                              {duration ? (
+                                <p className="mt-1 font-nav text-[11px] font-normal tracking-wide text-gray-muted">
+                                  {duration}
+                                </p>
+                              ) : null}
+                            </div>
+                            <p
+                              className="font-nav shrink-0 text-left text-[15px] font-medium leading-snug sm:max-w-[40%] sm:text-right"
+                              style={{ color: PEACH }}
+                            >
+                              {amount}
+                            </p>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-function SparkIcon() {
+function AccordionPlus({ open }: { open: boolean }) {
   return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-      <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
-    </svg>
+    <span
+      className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-charcoal/12 text-xl font-light leading-none text-charcoal/40 transition-transform duration-300 ease-in-out md:mt-0 ${
+        open ? "rotate-45" : ""
+      }`}
+      aria-hidden
+    >
+      +
+    </span>
   );
 }
