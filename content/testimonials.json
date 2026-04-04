@@ -1,44 +1,37 @@
 {
   "items": [
     {
-      "quote": "Salonul este superb, ambianța este foarte relaxantă, iar fetele sunt foarte prietenoase și profesioniste. Rezultatele epilării laser sunt vizibile de la prima ședință. Recomand cu încredere!",
-      "name": "Alexandra M.",
-      "service": "Epilare definitivă laser",
-      "initial": "A",
-      "rating": 5
-    },
-    {
-      "quote": "Am venit pentru un tratament facial de hidratare și am fost impresionată de profesionalismul echipei. Tenul meu arată mai bine ca niciodată! Cu siguranță voi reveni.",
-      "name": "Ioana P.",
-      "service": "Tratament facial de hidratare",
-      "initial": "I",
-      "rating": 5
-    },
-    {
-      "quote": "Cel mai frumos machiaj de mireasă pe care l-am avut! Totul a fost perfect, iar machiajul a rezistat toată ziua și seara. Fetele de la Halo Beauty sunt minunate!",
-      "name": "Maria D.",
-      "service": "Machiaj de mireasă",
+      "quote": "Totul la superlativ. După multe încercări la multe saloane de manichiură am avut norocul să o cunosc pe Cristina de la acest salon, este minunată, o fire calmă, dedicată și pasionată de ceea ce face… Rezultatul final este mult peste așteptări.",
+      "name": "Mădălina D.",
+      "service": "Manichiură",
       "initial": "M",
       "rating": 5
     },
     {
-      "quote": "Manichiura cu gel a durat aproape o lună! Sunt foarte mulțumită de servicii și de atmosfera din salon. Prietenos, curat și modern.",
-      "name": "Elena V.",
-      "service": "Manichiură cu gel",
-      "initial": "E",
+      "quote": "Un salon cu o atmosferă plăcută și servicii de calitate! Recomand!",
+      "name": "Lavinia P.",
+      "service": "Salon — atmosferă & calitate",
+      "initial": "L",
       "rating": 5
     },
     {
-      "quote": "Coafura pentru nuntă a fost exact cum mi-am dorit. Specialistele de la Halo sunt foarte talentate. Salon de top în Iași!",
-      "name": "Cristina R.",
-      "service": "Coafură eveniment",
-      "initial": "C",
+      "quote": "Recomand cu mare drag! Două fete minunate și profi! ❤️❤️❤️",
+      "name": "Ramona A.",
+      "service": "Echipa salonului",
+      "initial": "R",
       "rating": 5
     },
     {
-      "quote": "Remodelarea corporală cu Icoone este fantastică! Am văzut rezultate vizibile după doar câteva ședințe. Personalul este atent și te face să te simți confortabil.",
-      "name": "Diana L.",
-      "service": "Remodelare corporală",
+      "quote": "Amazing work every time!! Professional artist!!",
+      "name": "Donia K.",
+      "service": "Manichiură",
+      "initial": "D",
+      "rating": 5
+    },
+    {
+      "quote": "Servicii: Înfrumusețarea sprâncenelor, Epilare cu ceară, Modelare sprâncene, Epilare cu laser, Pensat, Epilat cu ceară, Manichiură",
+      "name": "Diana S.",
+      "service": "Sprâncene, epilare, laser, manichiură",
       "initial": "D",
       "rating": 5
     }

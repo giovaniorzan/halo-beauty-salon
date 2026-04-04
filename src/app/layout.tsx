@@ -20,6 +20,10 @@ const baseUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: "/icon.png",
+  },
   title: {
     default: `${site.siteName} | Salon de înfrumusețare premium în Iași`,
     template: `%s | ${site.siteName}`,
