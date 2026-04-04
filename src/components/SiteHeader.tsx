@@ -67,7 +67,7 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-content items-center justify-between px-6">
           <Link
             href="#acasa"
-            className="flex min-h-12 shrink-0 items-center py-1"
+            className="flex min-h-14 shrink-0 items-center py-1"
             onClick={() => setOpen(false)}
           >
             <Image
@@ -76,7 +76,7 @@ export function SiteHeader() {
               width={220}
               height={58}
               unoptimized
-              className={`h-9 w-auto max-h-[52px] max-w-[min(100%,240px)] object-contain object-left transition-[filter] duration-300 md:h-11 md:max-h-[58px] ${
+              className={`h-12 w-auto max-w-[min(100%,320px)] object-contain object-left transition-[filter] duration-300 sm:h-[3.25rem] md:h-14 lg:h-16 ${
                 onDarkHero
                   ? "brightness-0 invert drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
                   : ""

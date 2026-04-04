@@ -37,7 +37,7 @@ export function SiteFooter() {
                 width={220}
                 height={58}
                 unoptimized
-                className="h-9 w-auto max-w-[200px] object-contain object-left brightness-0 invert opacity-95 transition-opacity hover:opacity-100 md:h-10"
+                className="h-12 w-auto max-w-[min(100%,280px)] object-contain object-left brightness-0 invert opacity-95 transition-opacity hover:opacity-100 md:h-14"
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
