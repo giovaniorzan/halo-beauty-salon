@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
+
+const LOGO_SRC = "/images/logo.svg";
 
 const NAV = [
   { href: "#acasa", label: "Acasă" },
@@ -64,13 +67,21 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-content items-center justify-between px-6">
           <Link
             href="#acasa"
-            className={`font-display text-xl font-bold md:text-[1.6rem] ${
-              onDarkHero ? "[text-shadow:0_1px_3px_rgba(0,0,0,0.5)]" : "text-charcoal"
-            }`}
+            className="flex min-h-12 shrink-0 items-center py-1"
             onClick={() => setOpen(false)}
           >
-            <span className="text-gold-light">Halo</span>{" "}
-            <span className={onDarkHero ? "text-white/95" : ""}>Beauty</span>
+            <Image
+              src={LOGO_SRC}
+              alt="Halo Beauty Salon — logo"
+              width={220}
+              height={58}
+              unoptimized
+              className={`h-9 w-auto max-h-[52px] max-w-[min(100%,240px)] object-contain object-left transition-[filter] duration-300 md:h-11 md:max-h-[58px] ${
+                onDarkHero
+                  ? "brightness-0 invert drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
+                  : ""
+              }`}
+            />
           </Link>
 
           <nav

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
@@ -29,9 +30,16 @@ export function SiteFooter() {
       <div className="mx-auto max-w-content px-6 pb-0">
         <div className="grid gap-12 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <p className="font-display text-xl font-bold">
-              <span className="text-gold-light">Halo</span> Beauty
-            </p>
+            <Link href="#acasa" className="inline-flex">
+              <Image
+                src="/images/logo.svg"
+                alt="Halo Beauty Salon — logo"
+                width={220}
+                height={58}
+                unoptimized
+                className="h-9 w-auto max-w-[200px] object-contain object-left brightness-0 invert opacity-95 transition-opacity hover:opacity-100 md:h-10"
+              />
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Salonul tău de înfrumusețare premium din Iași. Frumusețe, eleganță și profesionalism într-un
               ambient luxos în zona Copou.
