@@ -50,10 +50,10 @@ export const metadata: Metadata = {
       "Frumusețe și eleganță într-un cadru luxos. Epilare definitivă, tratamente faciale, manichiură, coafor și machiaj profesional în Iași.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=630&fit=crop",
+        url: "/images/hero/hero_image.webp",
         width: 1200,
         height: 630,
-        alt: "Halo Beauty Salon — salon de înfrumusețare Iași",
+        alt: "Halo Beauty Salon — interior salon Iași",
       },
     ],
   },
@@ -62,9 +62,7 @@ export const metadata: Metadata = {
     title: `${site.siteName} | Salon de înfrumusețare în Iași`,
     description:
       "Epilare laser, tratamente faciale, manichiură și coafor în Iași — Halo Beauty Salon.",
-    images: [
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=630&fit=crop",
-    ],
+    images: ["/images/hero/hero_image.webp"],
   },
   robots: {
     index: true,
