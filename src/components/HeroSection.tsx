@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroTitleAnimated } from "@/components/HeroTitleAnimated";
 import { SalonImage } from "@/components/ui/SalonImage";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
@@ -35,24 +36,15 @@ export function HeroSection() {
             {h.label}
           </p>
         </Reveal>
-        <Reveal>
-          <h1
-            id="hero-heading"
-            className="font-display text-4xl font-semibold leading-tight text-white [text-shadow:0_2px_10px_rgba(80,50,40,0.5)] md:text-5xl lg:text-6xl"
-          >
-            {titleParts.length > 1 ? (
-              <>
-                {titleParts[0]}
-                <em className="not-italic text-[#e59a8f] [text-shadow:0_2px_12px_rgba(60,35,30,0.45)]">
-                  {italic}
-                </em>
-                {titleParts[1]}
-              </>
-            ) : (
-              h.title
-            )}
-          </h1>
-        </Reveal>
+        {titleParts.length > 1 ? (
+          <HeroTitleAnimated
+            before={titleParts[0]}
+            italic={italic}
+            after={titleParts[1] ?? ""}
+          />
+        ) : (
+          <HeroTitleAnimated before={h.title} italic="" after="" singleLine />
+        )}
         <Reveal>
           <p className="mt-6 max-w-lg text-lg font-normal leading-relaxed text-white [text-shadow:0_1px_5px_rgba(80,50,40,0.4)]">
             {h.description}
