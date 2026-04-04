@@ -34,10 +34,10 @@ export function SiteFooter() {
               <Image
                 src="/images/logo.svg"
                 alt="Halo Beauty Salon — logo"
-                width={220}
-                height={58}
+                width={260}
+                height={68}
                 unoptimized
-                className="h-12 w-auto max-w-[min(100%,280px)] object-contain object-left brightness-0 invert opacity-95 transition-opacity hover:opacity-100 md:h-14"
+                className="h-14 w-auto max-w-[min(100%,340px)] object-contain object-left brightness-0 invert opacity-95 transition-opacity hover:opacity-100 md:h-16"
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">

@@ -67,16 +67,16 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-content items-center justify-between px-6">
           <Link
             href="#acasa"
-            className="flex min-h-14 shrink-0 items-center py-1"
+            className="flex min-h-16 shrink-0 items-center py-1"
             onClick={() => setOpen(false)}
           >
             <Image
               src={LOGO_SRC}
               alt="Halo Beauty Salon — logo"
-              width={220}
-              height={58}
+              width={260}
+              height={68}
               unoptimized
-              className={`h-12 w-auto max-w-[min(100%,320px)] object-contain object-left transition-[filter] duration-300 sm:h-[3.25rem] md:h-14 lg:h-16 ${
+              className={`h-14 w-auto max-w-[min(100%,380px)] object-contain object-left transition-[filter] duration-300 sm:h-16 md:h-[4.25rem] lg:h-[4.75rem] ${
                 onDarkHero
                   ? "brightness-0 invert drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
                   : ""
