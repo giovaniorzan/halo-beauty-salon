@@ -15,3 +15,28 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Cursor personal: ascunde săgeata doar când componenta e activă (mouse, fără reduce motion) */
+@media (pointer: fine) {
+  html.use-rosegold-cursor body,
+  html.use-rosegold-cursor body * {
+    cursor: none !important;
+  }
+}
+
+.rose-cursor-ring-inner {
+  transform: scale(1);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.rose-cursor-ring-inner.rose-cursor-mag {
+  transform: scale(1.28);
+  border-color: rgba(237, 201, 175, 0.85);
+  box-shadow:
+    0 0 28px rgba(212, 168, 130, 0.45),
+    0 0 48px rgba(183, 110, 121, 0.25),
+    0 0 12px rgba(237, 201, 175, 0.4);
+}

@@ -36,18 +36,29 @@ const ACCENT_SHADOW_GLOW =
 const ACCENT_SHADOW_LINGER =
   "0 0 28px rgba(212,168,130,0.42), 0 0 48px rgba(183,110,121,0.22), 0 2px 12px rgba(60,35,30,0.42)";
 
+function displayChar(ch: string): string {
+  /* Spațiile într-un span inline-block se colapsează vizual; NBSP păstrează golul. */
+  if (/^\s$/.test(ch)) return "\u00A0";
+  return ch;
+}
+
 function CharStream({ text }: { text: string }) {
   const chars = graphemes(text);
   return (
     <>
-      {chars.map((ch, i) => (
-        <span
-          key={i}
-          className="hero-title-char inline-block opacity-0 will-change-transform"
-        >
-          {ch}
-        </span>
-      ))}
+      {chars.map((ch, i) => {
+        const isWs = /^\s$/.test(ch);
+        return (
+          <span
+            key={i}
+            className={`hero-title-char inline-block opacity-0 will-change-transform ${
+              isWs ? "min-w-[0.25em] whitespace-pre" : ""
+            }`}
+          >
+            {isWs ? displayChar(ch) : ch}
+          </span>
+        );
+      })}
     </>
   );
 }

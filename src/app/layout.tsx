@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Josefin_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { JsonLdLocalBusiness } from "@/components/JsonLd";
+import { RoseGoldCursor } from "@/components/RoseGoldCursor";
 import { getSiteUrl, site } from "@/lib/site";
 
 const playfair = Playfair_Display({
@@ -89,6 +90,7 @@ export default function RootLayout({
     <html lang="ro" className={`${playfair.variable} ${inter.variable} ${josefin.variable}`}>
       <body>
         <JsonLdLocalBusiness />
+        <RoseGoldCursor />
         {children}
       </body>
     </html>
