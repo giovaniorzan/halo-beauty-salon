@@ -61,78 +61,37 @@ export function SiteHeader() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-[1000] transition-all duration-300 ${
-          scrolled ? "bg-cream/95 py-2 shadow-sm backdrop-blur-xl" : "py-4 md:py-5"
+          scrolled ? "bg-cream/95 py-2 shadow-sm backdrop-blur-xl" : "py-3 md:py-4"
         }`}
       >
-        <div
-          className={`mx-auto flex max-w-content flex-wrap items-center px-4 sm:px-6 ${
-            scrolled ? "justify-between gap-3" : "justify-center gap-5"
-          }`}
-        >
-          <div
-            className={`relative flex items-center ${
-              scrolled ? "shrink-0 justify-start" : "w-full basis-full justify-center"
+        <div className="mx-auto flex max-w-content items-center justify-between gap-3 px-4 sm:px-6">
+          <Link
+            href="#acasa"
+            className={`flex shrink-0 items-center py-0.5 transition-all duration-300 ${
+              scrolled ? "min-h-14" : "min-h-[7.5rem] sm:min-h-32 md:min-h-36 lg:min-h-40"
             }`}
+            onClick={() => setOpen(false)}
           >
-            {!scrolled && (
-              <button
-                type="button"
-                className="absolute right-0 top-1/2 z-10 flex min-h-12 min-w-12 -translate-y-1/2 flex-col items-center justify-center gap-1.5 lg:hidden"
-                aria-expanded={open}
-                aria-label="Deschide meniul"
-                onClick={() => setOpen((o) => !o)}
-              >
-                <span
-                  className={`block h-0.5 w-6 rounded-full transition ${
-                    onDarkHero && !open ? "bg-white" : "bg-charcoal"
-                  } ${open ? "translate-y-2 rotate-45" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 w-6 rounded-full transition ${
-                    onDarkHero && !open ? "bg-white" : "bg-charcoal"
-                  } ${open ? "opacity-0" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 w-6 rounded-full transition ${
-                    onDarkHero && !open ? "bg-white" : "bg-charcoal"
-                  } ${open ? "-translate-y-2 -rotate-45" : ""}`}
-                />
-              </button>
-            )}
-            <Link
-              href="#acasa"
-              className={`flex items-center py-0.5 transition-all duration-300 ${
+            <Image
+              src={LOGO_SRC}
+              alt="Halo Beauty Salon — logo"
+              width={560}
+              height={145}
+              unoptimized
+              className={`w-auto object-contain object-left transition-all duration-300 ${
                 scrolled
-                  ? "min-h-20 justify-start lg:min-h-32"
-                  : "min-h-[11rem] justify-center sm:min-h-[13rem] md:min-h-[15rem] lg:min-h-[17rem] xl:min-h-[18rem]"
+                  ? "h-12 max-w-[min(100%,240px)] sm:h-14 sm:max-w-[min(100%,280px)] md:h-16 md:max-w-[min(100%,320px)] lg:h-[4.5rem] lg:max-w-[min(100%,360px)]"
+                  : "h-[7.5rem] max-w-[min(92vw,520px)] sm:h-32 sm:max-w-[min(90vw,560px)] md:h-36 md:max-w-[min(88vw,600px)] lg:h-40 lg:max-w-[min(40vw,480px)] xl:h-[10.5rem] xl:max-w-[min(44vw,560px)] 2xl:h-44 2xl:max-w-[min(100%,640px)]"
+              } ${
+                onDarkHero
+                  ? "brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]"
+                  : ""
               }`}
-              onClick={() => setOpen(false)}
-            >
-              <Image
-                src={LOGO_SRC}
-                alt="Halo Beauty Salon — logo"
-                width={840}
-                height={220}
-                unoptimized
-                className={`w-auto object-contain transition-all duration-300 ${
-                  scrolled ? "object-left" : "object-center sm:object-left lg:object-center"
-                } ${
-                  scrolled
-                    ? "h-20 max-w-[min(100%,520px)] sm:h-24 sm:max-w-[min(100%,560px)] md:h-28 md:max-w-[min(100%,600px)] lg:h-32 lg:max-w-[min(46vw,440px)] xl:max-w-[min(50vw,480px)]"
-                    : "h-[11rem] max-w-[min(96vw,960px)] sm:h-[12.5rem] sm:max-w-[min(94vw,1000px)] md:h-56 md:max-w-[min(92vw,1040px)] lg:h-64 lg:max-w-[min(90vw,1120px)] xl:h-[16.5rem] xl:max-w-[min(88vw,1200px)] 2xl:h-[17.5rem] 2xl:max-w-[min(100%,1200px)]"
-                } ${
-                  onDarkHero
-                    ? "brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]"
-                    : ""
-                }`}
-              />
-            </Link>
-          </div>
+            />
+          </Link>
 
           <nav
-            className={`hidden items-center justify-center gap-4 lg:flex xl:gap-5 ${
-              scrolled ? "" : "w-full basis-full"
-            }`}
+            className="hidden items-center gap-4 lg:flex xl:gap-5"
             aria-label="Principal"
           >
             {NAV.map((item) => (
@@ -154,7 +113,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-2 2xl:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             <span
               className={`flex items-center gap-1.5 text-[11px] ${
                 onDarkHero ? "text-white/80" : "text-gray-salon"
@@ -178,9 +137,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className={`flex min-h-12 min-w-12 flex-col items-center justify-center gap-1.5 lg:hidden ${
-              scrolled ? "" : "hidden"
-            }`}
+            className="flex min-h-12 min-w-12 flex-col items-center justify-center gap-1.5 lg:hidden"
             aria-expanded={open}
             aria-label="Deschide meniul"
             onClick={() => setOpen((o) => !o)}
