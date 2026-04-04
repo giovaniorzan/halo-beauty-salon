@@ -19,12 +19,12 @@ export function PricingSection() {
           </Reveal>
           <Reveal>
             <p className="mt-4 text-balance text-gray-salon leading-relaxed">
-              Prețuri clare, fără surprize. Beneficiezi lunar de oferte speciale și abonamente de fidelitate.
+              Lista de mai jos reflectă tarifele comunicate de salon.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-7 md:grid-cols-2">
           {pricingContent.groups.map((g) => (
             <Reveal key={g.id}>
               <article
@@ -55,15 +55,19 @@ export function PricingSection() {
                   {g.items.map((row, i) => (
                     <li
                       key={i}
-                      className={`flex items-center justify-between gap-2 border-b py-3 text-sm last:border-0 ${
+                      className={`flex flex-col gap-1.5 border-b py-3 text-sm last:border-0 sm:flex-row sm:items-start sm:justify-between sm:gap-4 ${
                         g.featured ? "border-white/10" : "border-black/[0.06]"
                       }`}
                     >
-                      <span className={g.featured ? "text-white/90" : "text-charcoal-light"}>
+                      <span
+                        className={`min-w-0 shrink-0 sm:max-w-[42%] ${
+                          g.featured ? "text-white/90" : "text-charcoal-light"
+                        }`}
+                      >
                         {row.name}
                       </span>
                       <span
-                        className={`shrink-0 font-semibold ${
+                        className={`min-w-0 font-semibold leading-snug sm:max-w-[55%] sm:text-right ${
                           g.featured ? "text-gold-light" : "text-rose"
                         }`}
                       >

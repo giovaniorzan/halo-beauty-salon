@@ -29,7 +29,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-[2] mx-auto w-full max-w-content px-6 pb-24 pt-28 md:pt-32">
+      <div className="relative z-[2] mx-auto w-full max-w-content px-6 pb-24 pt-44 sm:pt-52 md:pt-60 lg:pt-72 xl:pt-80">
         <Reveal>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-gold-light md:text-sm">
             {h.label}

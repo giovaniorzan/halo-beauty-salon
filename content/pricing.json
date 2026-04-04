@@ -1,58 +1,159 @@
 {
   "groups": [
     {
+      "id": "stilizare",
+      "title": "Preț Stilizare",
+      "description": "",
+      "featured": false,
+      "items": [
+        { "name": "Stilizat sprâncene", "price": "60 lei / 15 min" },
+        { "name": "Formă sprâncene (pensat-vop)", "price": "80 lei / 15 min" },
+        { "name": "Vopsit sprâncene", "price": "30 lei / 15 min" },
+        { "name": "Vopsit Henna sprâncene", "price": "60 lei / 20 min" },
+        { "name": "Vopsit gene", "price": "50 lei / 20 min" },
+        { "name": "Laminare sprâncene/gene", "price": "150 lei / 75 min" },
+        { "name": "Laminare sprâncene+gene", "price": "250 lei / 120 min" },
+        { "name": "Pachet laminare", "price": "250 lei / 120 min" }
+      ]
+    },
+    {
+      "id": "epilare-ceara",
+      "title": "Preț Epilare cu ceară",
+      "description": "",
+      "featured": false,
+      "items": [
+        { "name": "Mustață", "price": "10 lei / 10 min" },
+        { "name": "Axială", "price": "30 lei / 10 min" },
+        { "name": "Braț scurt/lung", "price": "35/45 lei / 20 min" },
+        { "name": "Picior scurt/lung", "price": "60/75 lei / 25 min" },
+        { "name": "Inghinal parțial (Linie bikini)", "price": "20 lei / 10 min" },
+        { "name": "Inghinal total", "price": "60 lei / 10 min" },
+        { "name": "Interfesier", "price": "25 lei / 10 min" },
+        { "name": "Fese", "price": "30 lei / 10 min" },
+        { "name": "Abdomen", "price": "15 lei / 10 min" },
+        { "name": "Spate", "price": "65 lei / 10 min" }
+      ]
+    },
+    {
+      "id": "tratamente-faciale",
+      "title": "Preț Tratamente faciale",
+      "description": "",
+      "featured": false,
+      "items": [
+        { "name": "Curatare (extractii)", "price": "280 lei / 90 min" },
+        { "name": "Peeling chimic", "price": "240 lei / 45 min" },
+        { "name": "Dermapen (pete, cicatrici)", "price": "380 lei / 75 min" },
+        { "name": "Tratament hidratare", "price": "340 lei / 90 min" },
+        { "name": "Radio frecventa (lifting)", "price": "185 lei / 45 min" },
+        { "name": "Oxigen hiperbaric", "price": "260 lei / 45 min" },
+        { "name": "Masaj facial de relaxare", "price": "130 lei / 40 min" },
+        { "name": "Microabraziune", "price": "200 lei" },
+        { "name": "Tratament Intraceuticals", "price": "480 lei" }
+      ]
+    },
+    {
+      "id": "epilare-laser-femei",
+      "title": "Preț Epilare definitivă femei",
+      "description": "",
+      "featured": false,
+      "items": [
+        {
+          "name": "Epilare mustață",
+          "price": "1 ședință: 80 lei · 6 ședințe: 480 lei · * 10% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare față integral",
+          "price": "1 ședință: 189 lei · 6 ședințe: 1134 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare perciuni",
+          "price": "1 ședință: 65 lei · 6 ședințe: 390 lei · * 10% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare axilă",
+          "price": "1 ședință: 129 lei · 6 ședințe: 774 lei · * 20% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare braț integral",
+          "price": "1 ședință: 280 lei · 6 ședințe: 1680 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare braț scurt",
+          "price": "1 ședință: 219 lei · 6 ședințe: 1314 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare picior lung (gambă)",
+          "price": "1 ședință: 579 lei · 6 ședințe: 3374 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare picior scurt (gambă)",
+          "price": "1 ședință: 358 lei · 6 ședințe: 2148 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare inghinal",
+          "price": "1 ședință: 195 lei · 6 ședințe: 1170 lei · * 30% reducere la pachetul de 6 ședințe"
+        },
+        {
+          "name": "Epilare interfesier",
+          "price": "1 ședință: 65 lei · 6 ședințe: 390 lei · * 20% reducere la pachetul de 6 ședințe"
+        }
+      ]
+    },
+    {
+      "id": "epilare-laser-barbati",
+      "title": "Preț Epilare definitivă bărbați",
+      "description": "",
+      "featured": false,
+      "items": [
+        { "name": "Epilare barbă", "price": "1 ședință - 165 lei · Pachet 6 ședințe - 625 lei" },
+        { "name": "Epilare gât", "price": "1 ședință - 245 lei · Pachet 6 ședințe - 1225 lei" },
+        { "name": "Epilare piept", "price": "1 ședință - 610 lei · Pachet 6 ședințe - 3050 lei" },
+        { "name": "Epilare abdomen", "price": "1 ședință - 325 lei · Pachet 6 ședințe - 1625 lei" },
+        { "name": "Epilare piept + abdomen", "price": "1 ședință - 825 lei · Pachet 6 ședințe - 4075 lei" },
+        { "name": "Epilare spate inferior", "price": "1 ședință - 445 lei · Pachet 6 ședințe - 2225 lei" },
+        { "name": "Epilare spate superior", "price": "1 ședință - 325 lei · Pachet 6 ședințe - 1625 lei" },
+        { "name": "Epilare spate complet", "price": "1 ședință - 770 lei · Pachet 6 ședințe - 3850 lei" },
+        { "name": "Epilare perciuni", "price": "1 ședință - 125 lei · Pachet 6 ședințe - 625 lei" },
+        { "name": "Epilare axilă", "price": "1 ședință - 185 lei · Pachet 6 ședințe - 925 lei" },
+        { "name": "Epilare umeri", "price": "1 ședință - 345 lei · Pachet 6 ședințe - 1725 lei" },
+        { "name": "Epilare picior integral", "price": "1 ședință - 850 lei · Pachet 6 ședințe - 4250 lei" },
+        { "name": "Epilare gambe", "price": "1 ședință - 550 lei · Pachet 6 ședințe - 2750 lei" },
+        { "name": "Epilare braț integral", "price": "1 ședință - 450 lei · Pachet 6 ședințe - 2250 lei" },
+        { "name": "Epilare antebraț", "price": "1 ședință - 300 lei · Pachet 6 ședințe - 1500 lei" }
+      ]
+    },
+    {
+      "id": "remodelare-corporala",
+      "title": "Remodelare corporală — Icoone Laser Med",
+      "description": "",
+      "featured": false,
+      "items": [
+        { "name": "Icoone", "price": "150 RON — 1 sedinta - 30 min" },
+        { "name": "Icoone", "price": "250 RON — 1 sedinta - 50 min" },
+        { "name": "Abonament Icoone", "price": "1800 RON — 10 sedinte - 50 min" },
+        { "name": "Drenaj limfatic", "price": "160 RON — 1 sedinta - 50 min" }
+      ]
+    },
+    {
       "id": "manichiura",
-      "title": "Manichiură & Pedichiură",
-      "description": "Unghii impecabile",
+      "title": "Prețuri manichiură",
+      "description": "",
       "featured": false,
       "items": [
-        { "name": "Manichiură clasică", "price": "80 lei" },
-        { "name": "Manichiură semipermanentă", "price": "120 lei" },
-        { "name": "Manichiură cu gel", "price": "150 lei" },
-        { "name": "Pedichiură clasică", "price": "100 lei" },
-        { "name": "Pedichiură semipermanentă", "price": "130 lei" }
+        { "name": "Semipermanenta", "price": "150 lei / 60 min" },
+        { "name": "Intretinere gel", "price": "170-250 lei / 90 min" },
+        { "name": "Constructie gel", "price": "190 - 300 lei / 120 min" },
+        { "name": "Top tips", "price": "250-500 lei / 120 min" }
       ]
     },
     {
-      "id": "epilare",
-      "title": "Epilare definitivă laser",
-      "description": "Tehnologie Elysion Pro",
-      "featured": true,
-      "items": [
-        { "name": "Față complet", "price": "150 lei" },
-        { "name": "Axile", "price": "120 lei" },
-        { "name": "Bikini", "price": "200 lei" },
-        { "name": "Picioare integral", "price": "350 lei" },
-        { "name": "Brațe complet", "price": "200 lei" },
-        { "name": "Full body", "price": "700 lei" }
-      ]
-    },
-    {
-      "id": "facial",
-      "title": "Tratamente faciale",
-      "description": "Tenul tău merită",
+      "id": "machiaj",
+      "title": "Prețuri machiaj profesional",
+      "description": "",
       "featured": false,
       "items": [
-        { "name": "Hidratare profundă", "price": "240 lei" },
-        { "name": "Tratament antirid", "price": "280 lei" },
-        { "name": "Anti-aging premium", "price": "300 lei" },
-        { "name": "Masaj facial", "price": "150 lei" },
-        { "name": "Mezoterapie", "price": "350 lei" },
-        { "name": "Peeling chimic", "price": "200 lei" }
-      ]
-    },
-    {
-      "id": "coafor",
-      "title": "Coafor & Machiaj",
-      "description": "Look-ul perfect",
-      "featured": false,
-      "items": [
-        { "name": "Tuns și coafat", "price": "80 lei" },
-        { "name": "Coafură eveniment", "price": "150 lei" },
-        { "name": "Vopsire păr", "price": "200 lei" },
-        { "name": "Machiaj de zi", "price": "120 lei" },
-        { "name": "Machiaj de seară", "price": "150 lei" },
-        { "name": "Machiaj de mireasă", "price": "250 lei" }
+        { "name": "Machiaj mireasa cu gene incluse", "price": "350 lei / 90 min" },
+        { "name": "Make up ocazie", "price": "200 lei / 60 min" }
       ]
     }
   ]
