@@ -51,6 +51,8 @@ export function SiteHeader() {
   }, [open]);
 
   const hours = site.contact.hours.headerShort;
+  /** Peste hero fundalul e întunecat — linkuri și text trebuie deschise */
+  const onDarkHero = !scrolled;
 
   return (
     <>
@@ -62,10 +64,13 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-content items-center justify-between px-6">
           <Link
             href="#acasa"
-            className="font-display text-xl font-bold text-charcoal md:text-[1.6rem]"
+            className={`font-display text-xl font-bold md:text-[1.6rem] ${
+              onDarkHero ? "[text-shadow:0_1px_3px_rgba(0,0,0,0.5)]" : "text-charcoal"
+            }`}
             onClick={() => setOpen(false)}
           >
-            <span className="text-gold">Halo</span> Beauty
+            <span className="text-gold-light">Halo</span>{" "}
+            <span className={onDarkHero ? "text-white/95" : ""}>Beauty</span>
           </Link>
 
           <nav
@@ -76,10 +81,14 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:bg-gold after:transition-all ${
-                  active === item.href
-                    ? "text-charcoal after:w-full"
-                    : "text-charcoal-light after:w-0 hover:after:w-full"
+                className={`relative text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:bg-gold-light after:transition-all ${
+                  onDarkHero
+                    ? active === item.href
+                      ? "text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.65)] after:w-full"
+                      : "text-white/90 after:w-0 hover:text-white hover:after:w-full [text-shadow:0_1px_3px_rgba(0,0,0,0.55)]"
+                    : active === item.href
+                      ? "text-charcoal after:w-full"
+                      : "text-charcoal-light after:w-0 hover:after:w-full"
                 }`}
               >
                 {item.label}
@@ -88,7 +97,11 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-2 xl:flex">
-            <span className="flex items-center gap-1.5 text-xs text-gray-salon">
+            <span
+              className={`flex items-center gap-1.5 text-xs ${
+                onDarkHero ? "text-white/80" : "text-gray-salon"
+              }`}
+            >
               <ClockIcon className="h-3.5 w-3.5 shrink-0" />
               {hours}
             </span>
@@ -109,19 +122,19 @@ export function SiteHeader() {
             onClick={() => setOpen((o) => !o)}
           >
             <span
-              className={`block h-0.5 w-6 rounded-full bg-charcoal transition ${
-                open ? "translate-y-2 rotate-45" : ""
-              }`}
+              className={`block h-0.5 w-6 rounded-full transition ${
+                onDarkHero && !open ? "bg-white" : "bg-charcoal"
+              } ${open ? "translate-y-2 rotate-45" : ""}`}
             />
             <span
-              className={`block h-0.5 w-6 rounded-full bg-charcoal transition ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`block h-0.5 w-6 rounded-full transition ${
+                onDarkHero && !open ? "bg-white" : "bg-charcoal"
+              } ${open ? "opacity-0" : ""}`}
             />
             <span
-              className={`block h-0.5 w-6 rounded-full bg-charcoal transition ${
-                open ? "-translate-y-2 -rotate-45" : ""
-              }`}
+              className={`block h-0.5 w-6 rounded-full transition ${
+                onDarkHero && !open ? "bg-white" : "bg-charcoal"
+              } ${open ? "-translate-y-2 -rotate-45" : ""}`}
             />
           </button>
         </div>
