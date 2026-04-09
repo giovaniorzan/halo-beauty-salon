@@ -119,7 +119,7 @@ export function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 
           {query.trim().length >= 2 && results.length === 0 && (
             <div className="text-center my-12">
-              <p className="text-lg text-charcoal font-medium">Nu am găsit rezultate pentru "{query}"</p>
+              <p className="text-lg text-charcoal font-medium">Nu am găsit rezultate pentru &quot;{query}&quot;</p>
               <p className="text-sm text-gray-salon mt-2">Încearcă alte cuvinte cheie (ex: epilare, masaj, unghii)</p>
             </div>
           )}
