@@ -10,7 +10,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { TechnologySection } from "@/components/TechnologySection";
-import { VoucherSection } from "@/components/VoucherSection";
 
 export default function HomePage() {
   return (
@@ -31,7 +30,6 @@ export default function HomePage() {
           <PricingSummary />
           <GallerySummary />
           <TestimonialsSection />
-          <VoucherSection />
           <ContactSection />
         </main>
         <SiteFooter />
