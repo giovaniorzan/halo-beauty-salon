@@ -8,13 +8,13 @@ import { site } from "@/lib/site";
 const LOGO_SRC = "/images/logo.svg";
 
 const NAV = [
-  { href: "#acasa", label: "Acasă" },
-  { href: "#despre", label: "Despre noi" },
-  { href: "#servicii", label: "Servicii" },
-  { href: "#preturi", label: "Prețuri" },
-  { href: "#galerie", label: "Galerie" },
-  { href: "#testimoniale", label: "Recenzii" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#acasa", label: "Acasă" },
+  { href: "/#despre", label: "Despre noi" },
+  { href: "/#servicii", label: "Servicii" },
+  { href: "/#preturi", label: "Prețuri" },
+  { href: "/#galerie", label: "Galerie" },
+  { href: "/#testimoniale", label: "Recenzii" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {

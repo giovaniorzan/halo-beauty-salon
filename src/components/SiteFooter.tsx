@@ -3,22 +3,22 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const NAV = [
-  { href: "#acasa", label: "Acasă" },
-  { href: "#despre", label: "Despre noi" },
-  { href: "#servicii", label: "Servicii" },
-  { href: "#preturi", label: "Prețuri" },
-  { href: "#galerie", label: "Galerie" },
-  { href: "#testimoniale", label: "Recenzii" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#acasa", label: "Acasă" },
+  { href: "/#despre", label: "Despre noi" },
+  { href: "/#servicii", label: "Servicii" },
+  { href: "/#preturi", label: "Prețuri" },
+  { href: "/#galerie", label: "Galerie" },
+  { href: "/#testimoniale", label: "Recenzii" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const SERVICES = [
-  { href: "#servicii", label: "Epilare definitivă" },
-  { href: "#servicii", label: "Tratamente faciale" },
-  { href: "#servicii", label: "Manichiură" },
-  { href: "#servicii", label: "Coafor" },
-  { href: "#servicii", label: "Machiaj" },
-  { href: "#servicii", label: "Remodelare corporală" },
+  { href: "/epilare-definitiva-iasi", label: "Epilare definitivă" },
+  { href: "/tratamente-faciale-iasi", label: "Tratamente faciale" },
+  { href: "/manichiura-iasi", label: "Manichiură / Pedichiură" },
+  { href: "/coafor-iasi-copou", label: "Coafor" },
+  { href: "/machiaj-profesional-iasi", label: "Machiaj Profesional" },
+  { href: "/remodelare-corporala-iasi", label: "Remodelare corporală" },
 ];
 
 export function SiteFooter() {
