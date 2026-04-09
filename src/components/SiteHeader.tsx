@@ -10,12 +10,12 @@ const LOGO_SRC = "/images/logo.svg";
 
 const NAV = [
   { href: "/", label: "Acasă" },
-  { href: "/#despre", label: "Despre noi" },
+  { href: "/despre", label: "Despre noi" },
   { href: "/servicii", label: "Servicii" },
   { href: "/preturi", label: "Prețuri" },
   { href: "/galerie", label: "Galerie" },
-  { href: "/#testimoniale", label: "Recenzii" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/recenzii", label: "Recenzii" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -36,7 +36,8 @@ export function SiteHeader() {
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActive(`#${e.target.id}`);
+          // Add explicit / to active state matching to simplify matching if needed but we'll keep the basic IDs matching logic just for internal page sections
+          // Actually if we are fully multi-page, active page state should be handled by pathname
         });
       },
       { rootMargin: "-20% 0px -70% 0px" }
@@ -102,11 +103,7 @@ export function SiteHeader() {
                 href={item.href}
                 className={`relative text-[13px] font-normal tracking-wide transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:bg-gold-light after:transition-all xl:text-sm ${
                   onDarkHero
-                    ? active === item.href
-                      ? "text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.65)] after:w-full"
-                      : "text-white/90 after:w-0 hover:text-white hover:after:w-full [text-shadow:0_1px_3px_rgba(0,0,0,0.55)]"
-                    : active === item.href
-                      ? "text-charcoal after:w-full"
+                      ? "text-white/90 after:w-0 hover:text-white hover:after:w-full [text-shadow:0_1px_3px_rgba(0,0,0,0.55)]"
                       : "text-charcoal-light after:w-0 hover:after:w-full"
                 }`}
               >
@@ -142,7 +139,7 @@ export function SiteHeader() {
           </button>
 
           <Link
-            href="/#contact"
+            href="/contact"
             className={`font-nav hidden shrink-0 items-center rounded-full font-semibold tracking-wide text-white transition md:inline-flex ${
               onDarkHero
                 ? "border border-white/25 bg-rose/90 px-4 py-2 text-xs shadow-none backdrop-blur-sm hover:border-white/40 hover:bg-rose"
@@ -195,7 +192,7 @@ export function SiteHeader() {
           </Link>
         ))}
         <Link
-          href="/#contact"
+          href="/contact"
           className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white shadow-salon"
           onClick={() => setOpen(false)}
         >
