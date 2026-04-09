@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior is handled by GSAP ScrollSmoother */
 }
 
 body {
@@ -16,14 +16,3 @@ body {
   }
 }
 
-/* Cursor personal: săgeată aurie — ascunde cursorul sistem doar când e activ */
-@media (pointer: fine) {
-  html.use-gold-arrow-cursor body,
-  html.use-gold-arrow-cursor body * {
-    cursor: none !important;
-  }
-}
-
-.gold-arrow-cursor-wrap {
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
-}

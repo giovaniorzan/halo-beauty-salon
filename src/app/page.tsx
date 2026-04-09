@@ -8,6 +8,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingButtons } from "@/components/FloatingButtons";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 export default function HomePage() {
   return (
@@ -19,16 +20,18 @@ export default function HomePage() {
         Sari la conținut
       </a>
       <SiteHeader />
-      <main id="main">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <PricingSection />
-        <GallerySection />
-        <TestimonialsSection />
-        <ContactSection />
-      </main>
-      <SiteFooter />
+      <SmoothScroll>
+        <main id="main">
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <PricingSection />
+          <GallerySection />
+          <TestimonialsSection />
+          <ContactSection />
+        </main>
+        <SiteFooter />
+      </SmoothScroll>
       <FloatingButtons />
     </>
   );
