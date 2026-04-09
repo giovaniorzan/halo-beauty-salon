@@ -3,6 +3,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { GallerySection } from "@/components/GallerySection";
 import { FloatingButtons } from "@/components/FloatingButtons";
+import { SiteHeader } from "@/components/SiteHeader";
+import { PageHero } from "@/components/PageHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,9 +16,15 @@ export default function GaleriePage() {
   return (
     <>
       <FloatingButtons />
+      <SiteHeader />
       <SmoothScroll>
-        <main className="min-h-screen bg-cream pt-20">
-          <GallerySection />
+        <main className="min-h-screen bg-cream">
+          <PageHero 
+            label="Portofoliu"
+            title="Rezultatele vorbesc de la sine."
+            description="O imagine face cât o mie de cuvinte. Explorează munca noastră."
+          />
+          <GallerySection hideHeader={true} />
           <ContactSection />
         </main>
         <SiteFooter />

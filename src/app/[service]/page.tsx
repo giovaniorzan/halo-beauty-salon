@@ -8,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Metadata } from "next";
 import { site } from "@/lib/site";
+import { SiteHeader } from "@/components/SiteHeader";
 import Link from "next/link";
 
 type Props = {
@@ -42,6 +43,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       <FloatingButtons />
+      <SiteHeader />
       <SmoothScroll>
         <main className="min-h-screen bg-cream">
           {/* SEO Hero Section */}

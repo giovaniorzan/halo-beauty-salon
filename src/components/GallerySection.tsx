@@ -5,7 +5,7 @@ import Image from "next/image";
 import { galleryContent } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 
-export function GallerySection() {
+export function GallerySection({ hideHeader }: { hideHeader?: boolean } = {}) {
   const allItems = galleryContent.items;
   
   // Extract unique categories from captions for filtering
@@ -68,28 +68,30 @@ export function GallerySection() {
   return (
     <section id="galerie" className="bg-cream py-24 md:py-28" aria-labelledby="gallery-heading">
       <div className="mx-auto max-w-content px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <Reveal>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">Galerie</p>
-          </Reveal>
-          <Reveal>
-            <h2
-              id="gallery-heading"
-              className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
-            >
-              Portofoliul nostru
-            </h2>
-          </Reveal>
-          <Reveal>
-            <p className="mt-4 text-balance text-gray-salon leading-relaxed">
-              Descoperă rezultatele muncii noastre — fiecare detaliu contează pentru noi.
-            </p>
-          </Reveal>
-        </div>
+        {!hideHeader && (
+          <div className="mx-auto max-w-2xl text-center">
+            <Reveal>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">Galerie</p>
+            </Reveal>
+            <Reveal>
+              <h2
+                id="gallery-heading"
+                className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
+              >
+                Portofoliul nostru
+              </h2>
+            </Reveal>
+            <Reveal>
+              <p className="mt-4 text-balance text-gray-salon leading-relaxed">
+                Descoperă rezultatele muncii noastre — fiecare detaliu contează pentru noi.
+              </p>
+            </Reveal>
+          </div>
+        )}
 
         {/* Filter Categories */}
         {categories.length > 2 && (
-          <div className="mt-12 flex flex-wrap justify-center gap-2">
+          <div className={`flex flex-wrap justify-center gap-2 ${hideHeader ? 'mt-4' : 'mt-12'}`}>
             {categories.map((c) => (
               <button
                 key={c}

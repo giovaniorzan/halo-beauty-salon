@@ -8,7 +8,7 @@ import { pricingContent } from "@/lib/site";
 const BG = "#fdfaf7";
 const PEACH = "#e59a8f";
 
-export function PricingSection() {
+export function PricingSection({ hideHeader }: { hideHeader?: boolean } = {}) {
   const [activeTabId, setActiveTabId] = useState<string>(
     pricingContent.groups[0]?.id || ""
   );
@@ -23,27 +23,29 @@ export function PricingSection() {
       aria-labelledby="pricing-heading"
     >
       <div className="mx-auto max-w-content px-4 sm:px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <Reveal>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">Prețuri</p>
-          </Reveal>
-          <Reveal>
-            <h2
-              id="pricing-heading"
-              className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
-            >
-              Listă de Prețuri & Tratamente
-            </h2>
-          </Reveal>
-          <Reveal>
-            <p className="mt-4 text-balance leading-relaxed text-gray-salon">
-              Alege calitatea și inovația. Descoperă tarifele pentru serviciile noastre premium.
-            </p>
-          </Reveal>
-        </div>
+        {!hideHeader && (
+          <div className="mx-auto max-w-2xl text-center">
+            <Reveal>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">Prețuri</p>
+            </Reveal>
+            <Reveal>
+              <h2
+                id="pricing-heading"
+                className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
+              >
+                Listă de Prețuri & Tratamente
+              </h2>
+            </Reveal>
+            <Reveal>
+              <p className="mt-4 text-balance leading-relaxed text-gray-salon">
+                Alege calitatea și inovația. Descoperă tarifele pentru serviciile noastre premium.
+              </p>
+            </Reveal>
+          </div>
+        )}
 
         {/* Tabs Navigation */}
-        <div className="mt-12 md:mt-16">
+        <div className={`mt-12 md:mt-16 ${hideHeader ? "mt-0" : ""}`}>
           <div className="flex flex-nowrap gap-3 overflow-x-auto pb-4 scrollbar-hide md:flex-wrap md:justify-center md:pb-0">
             {pricingContent.groups.map((g) => (
               <button

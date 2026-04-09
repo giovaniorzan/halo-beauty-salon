@@ -3,6 +3,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { PricingSection } from "@/components/PricingSection";
 import { FloatingButtons } from "@/components/FloatingButtons";
+import { SiteHeader } from "@/components/SiteHeader";
+import { PageHero } from "@/components/PageHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,9 +16,15 @@ export default function PreturiPage() {
   return (
     <>
       <FloatingButtons />
+      <SiteHeader />
       <SmoothScroll>
-        <main className="min-h-screen bg-cream pt-20">
-          <PricingSection />
+        <main className="min-h-screen bg-cream">
+          <PageHero 
+            label="Transparență"
+            title="Găsește Pachetul Potrivit Pentru Tine."
+            description="Transparență 100%. Calitate demonstrată."
+          />
+          <PricingSection hideHeader={true} />
           <ContactSection />
         </main>
         <SiteFooter />

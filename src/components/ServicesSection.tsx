@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { servicesContent } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 
-export function ServicesSection() {
+export function ServicesSection({ hideHeader }: { hideHeader?: boolean } = {}) {
   const [cat, setCat] = useState("all");
   const filtered = useMemo(() => {
     if (cat === "all") return servicesContent.services;
@@ -14,29 +14,30 @@ export function ServicesSection() {
   return (
     <section id="servicii" className="bg-cream py-24 md:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-content px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <Reveal>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Serviciile noastre
-            </p>
-          </Reveal>
-          <Reveal>
-            <h2
-              id="services-heading"
-              className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
-            >
-              Servicii de înfrumusețare premium
-            </h2>
-          </Reveal>
-          <Reveal>
-            <p className="mt-4 text-balance text-gray-salon leading-relaxed">
-              Oferim o gamă completă de servicii profesionale, de la epilare definitivă laser până la
-              manichiură, coafor și tratamente faciale.
-            </p>
-          </Reveal>
-        </div>
+        {!hideHeader && (
+          <div className="mx-auto max-w-2xl text-center">
+            <Reveal>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+                Serviciile noastre
+              </p>
+            </Reveal>
+            <Reveal>
+              <h2
+                id="services-heading"
+                className="font-display text-3xl font-semibold text-charcoal md:text-4xl"
+              >
+                Top Tratamente Faciale și Corporale
+              </h2>
+            </Reveal>
+            <Reveal>
+              <p className="mt-4 text-balance text-gray-salon leading-relaxed">
+                Descoperă procedurile premium, personalizate pentru nevoile tale, realizate de experții noștri în estetică și îngrijire.
+              </p>
+            </Reveal>
+          </div>
+        )}
 
-        <div className="mt-12 flex flex-wrap justify-center gap-2">
+        <div className={`flex flex-wrap justify-center gap-2 ${hideHeader ? 'mt-0' : 'mt-12'}`}>
           {servicesContent.categories.map((c) => (
             <button
               key={c.id}
