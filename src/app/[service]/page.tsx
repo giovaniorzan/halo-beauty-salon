@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 import Link from "next/link";
 
 type Props = {
-  params: { service: string };
+  params: Promise<{ service: string }>;
 };
 
 export function generateStaticParams() {
@@ -20,8 +20,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const data = getServiceData(params.service);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const data = getServiceData(resolvedParams.service);
   if (!data) return { title: "Not Found" };
 
   return {
@@ -30,8 +31,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ServicePage({ params }: Props) {
-  const data = getServiceData(params.service);
+export default async function ServicePage({ params }: Props) {
+  const resolvedParams = await params;
+  const data = getServiceData(resolvedParams.service);
 
   if (!data) {
     notFound();
