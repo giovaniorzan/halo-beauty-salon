@@ -18,8 +18,8 @@ body {
 
 @keyframes slideInRight {
   from {
-    transform: translateX(10%);
-    opacity: 0;
+    transform: translateX(100vw);
+    opacity: 0.8;
   }
   to {
     transform: translateX(0);
@@ -28,6 +28,6 @@ body {
 }
 
 .animate-page-slide {
-  animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideInRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
