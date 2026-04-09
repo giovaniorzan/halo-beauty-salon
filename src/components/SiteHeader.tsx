@@ -4,15 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
+import { SearchModal } from "@/components/SearchModal";
 
 const LOGO_SRC = "/images/logo.svg";
 
 const NAV = [
-  { href: "/#acasa", label: "Acasă" },
+  { href: "/", label: "Acasă" },
   { href: "/#despre", label: "Despre noi" },
-  { href: "/#servicii", label: "Servicii" },
-  { href: "/#preturi", label: "Prețuri" },
-  { href: "/#galerie", label: "Galerie" },
+  { href: "/servicii", label: "Servicii" },
+  { href: "/preturi", label: "Prețuri" },
+  { href: "/galerie", label: "Galerie" },
   { href: "/#testimoniale", label: "Recenzii" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -21,6 +22,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#acasa");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -124,8 +126,23 @@ export function SiteHeader() {
             </span>
           </div>
 
+          <button
+            type="button"
+            className={`font-nav flex shrink-0 items-center justify-center rounded-full transition ${
+              onDarkHero
+                ? "text-white/90 hover:text-white hover:bg-white/10"
+                : "text-charcoal hover:bg-charcoal/5"
+            } h-10 w-10 md:h-11 md:w-11`}
+            onClick={() => setIsSearchOpen(true)}
+            aria-label="Căutare"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
           <Link
-            href="#contact"
+            href="/#contact"
             className={`font-nav hidden shrink-0 items-center rounded-full font-semibold tracking-wide text-white transition md:inline-flex ${
               onDarkHero
                 ? "border border-white/25 bg-rose/90 px-4 py-2 text-xs shadow-none backdrop-blur-sm hover:border-white/40 hover:bg-rose"
@@ -178,13 +195,15 @@ export function SiteHeader() {
           </Link>
         ))}
         <Link
-          href="#contact"
+          href="/#contact"
           className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white shadow-salon"
           onClick={() => setOpen(false)}
         >
           Programează-te
         </Link>
       </div>
+
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 }

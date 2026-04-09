@@ -1,14 +1,34 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { galleryContent } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 
 export function GallerySection() {
-  const items = galleryContent.items;
+  const allItems = galleryContent.items;
+  
+  // Extract unique categories from captions for filtering
+  const categories = useMemo(() => {
+    const cats = new Set<string>();
+    cats.add("Toate");
+    allItems.forEach(item => {
+      if (item.caption) {
+        cats.add(item.caption);
+      }
+    });
+    return Array.from(cats);
+  }, [allItems]);
+
+  const [cat, setCat] = useState("Toate");
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+
+  // Filtered items
+  const items = useMemo(() => {
+    if (cat === "Toate") return allItems;
+    return allItems.filter((i) => i.caption === cat);
+  }, [cat, allItems]);
 
   const openAt = useCallback((i: number) => {
     setIndex(i);
@@ -67,7 +87,27 @@ export function GallerySection() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid list-none grid-cols-2 gap-4 md:grid-cols-4">
+        {/* Filter Categories */}
+        {categories.length > 2 && (
+          <div className="mt-12 flex flex-wrap justify-center gap-2">
+            {categories.map((c) => (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setCat(c)}
+                className={`min-h-12 rounded-full px-5 text-sm font-medium transition ${
+                  cat === c
+                    ? "bg-rose text-white shadow-salon"
+                    : "bg-white text-gray-salon hover:bg-blush-light"
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <ul className="mt-14 grid list-none grid-cols-2 gap-4 md:grid-cols-4 transition-all duration-500 min-h-[400px]">
           {items.map((item, i) => {
             const featured = item.featured === true;
             return (

@@ -1,9 +1,9 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { PricingSection } from "@/components/PricingSection";
-import { GallerySection } from "@/components/GallerySection";
+import { ServicesSummary } from "@/components/ServicesSummary";
+import { PricingSummary } from "@/components/PricingSummary";
+import { GallerySummary } from "@/components/GallerySummary";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -26,10 +26,10 @@ export default function HomePage() {
         <main id="main">
           <HeroSection />
           <AboutSection />
-          <ServicesSection />
+          <ServicesSummary />
           <TechnologySection />
-          <PricingSection />
-          <GallerySection />
+          <PricingSummary />
+          <GallerySummary />
           <TestimonialsSection />
           <VoucherSection />
           <ContactSection />
