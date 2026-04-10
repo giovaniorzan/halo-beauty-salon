@@ -54,14 +54,14 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <Link
               href="#contact"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-rose px-9 text-sm font-semibold text-white transition hover:bg-rose-deep hover:shadow-lg"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-[linear-gradient(110deg,#C48B7C,45%,#F2DDD6,55%,#C48B7C)] bg-[length:200%_100%] animate-premium-btn px-9 text-sm font-bold text-white transition hover:scale-105 hover:brightness-110 focus:outline-none"
             >
               Programează-te acum
               <ArrowRightIcon />
             </Link>
             <Link
               href="#servicii"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-white/30 px-8 text-sm font-semibold text-white transition hover:border-gold hover:bg-gold/10"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-8 text-sm font-semibold text-white backdrop-blur-md transition hover:border-gold hover:bg-gold/20"
             >
               Descoperă serviciile
             </Link>

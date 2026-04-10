@@ -34,6 +34,25 @@ const config: Config = {
       maxWidth: {
         content: "1200px",
       },
+      keyframes: {
+        shine: {
+          from: { backgroundPosition: "200% center" },
+          to: { backgroundPosition: "-200% center" },
+        },
+        pulseGlow: {
+          "0%, 100%": { 
+            boxShadow: "0 0 15px 2px rgba(196, 139, 124, 0.4), inset 0 0 8px 0 rgba(255, 255, 255, 0.2)" 
+          },
+          "50%": { 
+            boxShadow: "0 0 25px 6px rgba(196, 139, 124, 0.6), inset 0 0 15px 4px rgba(255, 255, 255, 0.4)" 
+          },
+        }
+      },
+      animation: {
+        shine: "shine 4s linear infinite",
+        pulseGlow: "pulseGlow 2.5s ease-in-out infinite",
+        "premium-btn": "shine 4s linear infinite, pulseGlow 2.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
