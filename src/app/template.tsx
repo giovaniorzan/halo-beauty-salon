@@ -17,6 +17,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
     () => {
       const tl = gsap.timeline();
 
+      // Reset scroll position instantly when new page mounts
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
       // 1. Tranziția cortinei: glisează spre stânga dezvelind pagina nouă
       tl.to(".template-curtain", {
         xPercent: -100,

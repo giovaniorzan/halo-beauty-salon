@@ -3,13 +3,13 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const NAV = [
-  { href: "/#acasa", label: "Acasă" },
-  { href: "/#despre", label: "Despre noi" },
-  { href: "/#servicii", label: "Servicii" },
-  { href: "/#preturi", label: "Prețuri" },
-  { href: "/#galerie", label: "Galerie" },
-  { href: "/#testimoniale", label: "Recenzii" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/", label: "Acasă" },
+  { href: "/despre", label: "Despre noi" },
+  { href: "/servicii", label: "Servicii" },
+  { href: "/preturi", label: "Prețuri" },
+  { href: "/galerie", label: "Galerie" },
+  { href: "/recenzii", label: "Recenzii" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const SERVICES = [
