@@ -145,9 +145,28 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="py-6 text-center text-xs text-white/40">
-          © {new Date().getFullYear()} {site.siteName}. Toate drepturile rezervate. Creat cu dragoste în Iași.
-        </p>
+        <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
+          <p className="text-center text-xs text-white/40 md:text-left">
+            © {new Date().getFullYear()} {site.siteName}. Toate drepturile rezervate. Creat cu dragoste în Iași.
+          </p>
+          
+          <a
+            href="https://www.nazrox.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group font-sans inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-[14px] font-medium text-[#a1a1aa] no-underline transition-all duration-300 ease-in-out hover:text-[#ffffff]"
+          >
+            Built by{" "}
+            <span className="flex items-center gap-1 font-bold text-[#ffffff]">
+              nazro<span className="text-[#22d3ee]">X</span>
+              <img
+                src="https://www.nazrox.com/nazrox_logo.svg"
+                alt="Nazrox Logo"
+                className="h-6 w-6 object-contain transition-all duration-300 ease-in-out group-hover:-translate-y-[2px] group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.6)]"
+              />
+            </span>
+          </a>
+        </div>
       </div>
     </footer>
   );
