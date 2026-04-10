@@ -157,13 +157,8 @@ export function SiteFooter() {
             className="group font-sans inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-[14px] font-medium text-[#a1a1aa] no-underline transition-all duration-300 ease-in-out hover:text-[#ffffff]"
           >
             Built by{" "}
-            <span className="flex items-center gap-1 font-bold text-[#ffffff]">
-              nazro<span className="text-[#22d3ee]">X</span>
-              <img
-                src="https://www.nazrox.com/nazrox_logo.svg"
-                alt="Nazrox Logo"
-                className="h-6 w-6 object-contain transition-all duration-300 ease-in-out group-hover:-translate-y-[2px] group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.6)]"
-              />
+            <span className="font-bold text-[#ffffff] tracking-tight">
+              NAZRO<span className="text-[#22d3ee]">X</span>
             </span>
           </a>
         </div>
