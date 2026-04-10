@@ -69,7 +69,7 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex max-w-content items-center justify-between gap-3 px-4 sm:px-6">
           <Link
-            href="#acasa"
+            href="/"
             className={`flex shrink-0 items-center py-0.5 transition-all duration-300 ${
               scrolled ? "min-h-14" : "min-h-[7.5rem] sm:min-h-32 md:min-h-36 lg:min-h-40"
             }`}

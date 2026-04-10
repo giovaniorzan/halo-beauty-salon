@@ -30,7 +30,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-content px-6 pb-0">
         <div className="grid gap-12 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <Link href="#acasa" className="inline-flex">
+            <Link href="/" className="inline-flex">
               <Image
                 src="/images/logo.svg"
                 alt="Halo Beauty Salon — logo"
