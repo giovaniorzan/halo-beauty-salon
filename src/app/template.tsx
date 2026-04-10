@@ -36,7 +36,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
             stagger: 0.08,
             duration: 0.8,
             ease: "power2.out",
-            clearProps: "all" // Păstrăm style curat după animație pt flexibilitate CSS
+            clearProps: "transform,opacity" // Evităm "all" pentru a nu șterge stilurile inline de la next/image (fill, absolute etc)
           },
           "-=0.4"
         );
