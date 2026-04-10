@@ -17,9 +17,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
     () => {
       const tl = gsap.timeline();
 
-      // 1. Tranziția cortinei: glisează în sus dezvelind pagina nouă
+      // 1. Tranziția cortinei: glisează spre stânga dezvelind pagina nouă
       tl.to(".template-curtain", {
-        yPercent: -100,
+        xPercent: -100,
         duration: 0.8,
         ease: "power2.inOut",
       });

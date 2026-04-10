@@ -42,9 +42,7 @@ export function SmoothScroll({ children }: Props) {
   return (
     <div id="smooth-wrapper" ref={wrapperRef}>
       <div id="smooth-content" ref={contentRef}>
-        <div className="animate-page-slide">
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   );
