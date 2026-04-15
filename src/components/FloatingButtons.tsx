@@ -10,14 +10,14 @@ export function FloatingButtons() {
         href={`https://wa.me/${c.whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-salon-lg transition hover:scale-105"
+        className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-salon-lg transition hover:scale-105"
         aria-label="WhatsApp"
       >
         <WaIcon />
       </a>
       <a
         href={`tel:${phone}`}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-rose text-white shadow-salon-lg transition hover:scale-105"
+        className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-rose text-white shadow-salon-lg transition hover:scale-105"
         aria-label="Sună acum"
       >
         <PhoneIcon />

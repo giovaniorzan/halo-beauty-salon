@@ -5,7 +5,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimoniale"
-      className="bg-white py-24 md:py-28"
+      className="bg-white py-16 md:py-28"
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto max-w-content px-6">
@@ -31,9 +31,9 @@ export function TestimonialsSection() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid list-none gap-7 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 flex snap-x snap-mandatory overflow-x-auto pb-8 md:grid md:overflow-visible md:pb-0 list-none gap-7 md:grid-cols-2 lg:grid-cols-3 md:mt-14 scrollbar-hide">
           {testimonialsContent.items.map((t, i) => (
-            <li key={i}>
+            <li key={i} className="min-w-[90vw] shrink-0 snap-center md:min-w-0 md:shrink">
               <Reveal>
                 <article className="h-full rounded-xl bg-cream p-9 shadow-sm transition hover:-translate-y-1 hover:shadow-salon">
                   <div className="mb-4 flex gap-0.5" aria-label={`${t.rating} din 5 stele`}>

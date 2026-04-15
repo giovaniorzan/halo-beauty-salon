@@ -10,7 +10,7 @@ export function GallerySummary() {
   const items = galleryContent.items.slice(0, 4);
 
   return (
-    <section className="bg-cream py-24 md:py-28" aria-labelledby="gallery-summary-heading">
+    <section className="bg-cream py-16 md:py-28" aria-labelledby="gallery-summary-heading">
       <div className="mx-auto max-w-content px-6">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -26,13 +26,13 @@ export function GallerySummary() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid list-none grid-cols-2 gap-4 md:grid-cols-4">
+        <ul className="mt-10 flex snap-x snap-mandatory overflow-x-auto pb-8 md:grid md:overflow-visible md:pb-0 list-none md:grid-cols-4 gap-4 md:mt-14 scrollbar-hide">
           {items.map((item, i) => {
             const featured = item.featured === true;
             return (
               <li
                 key={i}
-                className={featured ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2" : ""}
+                className={`min-w-[85vw] shrink-0 snap-center md:min-w-0 md:shrink ${featured ? "md:col-span-2 md:row-span-2" : ""}`}
               >
                 <Reveal>
                   <Link

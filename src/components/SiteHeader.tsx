@@ -176,16 +176,19 @@ export function SiteHeader() {
       </header>
 
       <div
-        className={`fixed inset-0 z-[999] flex flex-col items-center justify-center gap-8 bg-cream backdrop-blur-md transition lg:hidden ${
+        className={`fixed inset-0 z-[999] flex flex-col items-center justify-center gap-8 bg-cream/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!open}
       >
-        {NAV.map((item) => (
+        {NAV.map((item, index) => (
           <Link
             key={item.href}
             href={item.href}
-            className="font-nav text-2xl font-normal tracking-wide text-nude-deep transition-colors hover:text-rose-deep active:text-rose-deep"
+            className={`font-nav text-2xl font-normal tracking-wide text-nude-deep transition-all duration-500 hover:text-rose-deep active:text-rose-deep ${
+              open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            }`}
+            style={{ transitionDelay: `${index * 50 + 150}ms` }}
             onClick={() => setOpen(false)}
           >
             {item.label}
@@ -193,7 +196,10 @@ export function SiteHeader() {
         ))}
         <Link
           href="/contact"
-          className="font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white shadow-salon"
+          className={`font-nav mt-4 inline-flex min-h-12 items-center rounded-full bg-rose px-8 text-sm font-semibold tracking-wide text-white shadow-salon transition-all duration-500 ${
+            open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+          style={{ transitionDelay: `${NAV.length * 50 + 150}ms` }}
           onClick={() => setOpen(false)}
         >
           Programează-te

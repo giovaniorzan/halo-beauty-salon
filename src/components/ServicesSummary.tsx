@@ -9,7 +9,7 @@ export function ServicesSummary() {
   const topServices = servicesContent.services.filter(s => s.badge).slice(0, 4);
 
   return (
-    <section id="servicii" className="bg-cream py-24 md:py-28" aria-labelledby="services-summary-heading">
+    <section id="servicii" className="bg-cream py-16 md:py-28" aria-labelledby="services-summary-heading">
       <div className="mx-auto max-w-content px-6">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -32,9 +32,9 @@ export function ServicesSummary() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid list-none gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 flex snap-x snap-mandatory overflow-x-auto pb-8 sm:grid sm:overflow-visible sm:pb-0 list-none gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-14 scrollbar-hide">
           {topServices.map((s) => (
-            <li key={s.id}>
+            <li key={s.id} className="min-w-[85vw] shrink-0 snap-center sm:min-w-0 sm:shrink">
               <Reveal>
                 <article className="group h-full overflow-hidden rounded-xl border border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blush-light hover:shadow-salon-lg">
                   <span className="mb-4 inline-block rounded-full bg-cream px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold-dark">
